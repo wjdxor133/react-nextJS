@@ -1,11 +1,11 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 import { Form, Input, Button } from "antd";
 import Link from "next/Link";
 import PropTypes from "prop-types";
 import useInput from "../hooks/useInput";
 
-import { loginAction } from "../reducers/";
+import { loginAction } from "../reducers/user";
 import { useDispatch } from "react-redux";
 
 const ButtonWrapper = styled.div`

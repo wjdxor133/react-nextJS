@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -14,7 +14,9 @@ const SearchInput = styled(Input.Search)`
 `;
 
 const AppLayout = ({ children }) => {
-  const isLoggedIn = useSelector((state) => state?.user.isLoggedIn);
+  // const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+  // 구조 분해 할당
+  const { isLoggedIn } = useSelector((state) => state.user);
 
   return (
     <>
